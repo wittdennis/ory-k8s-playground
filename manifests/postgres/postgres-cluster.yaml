@@ -1,0 +1,26 @@
+kind: "postgresql"
+apiVersion: "acid.zalan.do/v1"
+
+metadata:
+  name: "postgres-ory"
+  namespace: "ory-playground"
+
+spec:
+  teamId: pseud0r4ndom
+  postgresql:
+    version: "15"
+  numberOfInstances: 2
+  volume:
+    size: "10Gi"
+  users:
+    ory: []
+  databases:
+    kratos: ory
+  
+  resources:
+    requests:
+      cpu: 100m
+      memory: 2Gi
+    limits:
+      cpu: 500m
+      memory: 4Gi
