@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mailslurper
+  namespace: ory-playground  
+spec:
+  selector:
+    matchLabels:
+      app: mailslurper
+  template:
+    metadata:
+      labels:
+        app: mailslurper
+    spec:
+      containers:
+      - name: mailslurper
+        image: marcopas/docker-mailslurper
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 2500
+          protocol: TCP
+          name: smtp
+        - containerPort: 8080
+          protocol: TCP
+          name: www
+        - containerPort: 8085
+          protocol: TCP
+          name: service
+
