@@ -1,6 +1,12 @@
+image:
+  repository: oryd/kratos
+  tag: v0.11.1
 kratos:
+  automigration:
+    enabled: true
+    type: initContainer
   config:
-    dsn: postgres://kratos:7MKCmw7KkAyQwIiJALcDKp7Vinbnplo8inChpiokTy7ADz95PrPDdvqVMhDAIu48@postgres-ory:5432/kratos
+    dsn: postgres://ory:7MKCmw7KkAyQwIiJALcDKp7Vinbnplo8inChpiokTy7ADz95PrPDdvqVMhDAIu48@postgres-ory:5432/kratos
     secrets:
       default:
         - G5zpGur55TehKFPLEKuYW7dCHwiwzTWGBq6yu9m5AHcmdJmP4tfMNS2eLYefAZtCfQYr3W8pHY7rY48NuQF4exBgGV9S8aSthb3xvGcpVZNSfcN9N2feVxBkrzKWLM9J
@@ -14,8 +20,6 @@ kratos:
         connection_uri: smtp://mailslurper:2500
     selfservice:
       default_browser_return_url: http://127.0.0.1:4455/
-  automigration:
-    enabled: true
   identitySchemas:
     "identity.default.schema.json": |
       {
