@@ -20,6 +20,17 @@ public class AuthController : ControllerBase
 
         var test = await identityApi.GetIdentitySchemaAsync("default");
 
+        var client = new HttpClient();
+
+        var resutl = await client.PostAsJsonAsync("http://localhost:4434/admin/identities", new
+        {
+            schema_id = "default",
+            traits = new Dictionary<string, string>()
+            {
+                { "email", "admin@mail.com"}
+            }
+        });
+
         var result = await identityApi.CreateIdentityAsync(new KratosCreateIdentityBody
         {
             SchemaId = "default",
