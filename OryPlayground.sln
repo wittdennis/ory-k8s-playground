@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{C04D99F7-D202-4327-8152-B434ADB1F79E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "apps", "apps", "{DAC8FDF6-94F3-4A1C-9743-B5BA3CECEBA0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthProxyApi", "src\apps\auth-proxy-api\AuthProxyApi.csproj", "{08B903E8-C3BD-459B-A764-2F842220CA36}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{08B903E8-C3BD-459B-A764-2F842220CA36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08B903E8-C3BD-459B-A764-2F842220CA36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08B903E8-C3BD-459B-A764-2F842220CA36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08B903E8-C3BD-459B-A764-2F842220CA36}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DAC8FDF6-94F3-4A1C-9743-B5BA3CECEBA0} = {C04D99F7-D202-4327-8152-B434ADB1F79E}
+		{08B903E8-C3BD-459B-A764-2F842220CA36} = {DAC8FDF6-94F3-4A1C-9743-B5BA3CECEBA0}
+	EndGlobalSection
+EndGlobal

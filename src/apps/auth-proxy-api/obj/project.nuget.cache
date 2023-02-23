@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "dgSpecHash": "IU5umlvaa/PSTu8lcw1gN7ogv01/RewqTtsSoS1s9BLjjeZJYqam+jg65xShvgorI+6618TPs3sHWlYQ3esTfA==",
+  "success": true,
+  "projectFilePath": "/home/denniswitt/src/ory-k8s-playground/src/apps/auth-proxy-api/AuthProxyApi.csproj",
+  "expectedPackageFiles": [
+    "/home/denniswitt/.nuget/packages/jsonsubtypes/1.8.0/jsonsubtypes.1.8.0.nupkg.sha512",
+    "/home/denniswitt/.nuget/packages/microsoft.aspnetcore.openapi/7.0.2/microsoft.aspnetcore.openapi.7.0.2.nupkg.sha512",
+    "/home/denniswitt/.nuget/packages/microsoft.extensions.apidescription.server/6.0.5/microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "/home/denniswitt/.nuget/packages/microsoft.openapi/1.4.3/microsoft.openapi.1.4.3.nupkg.sha512",
+    "/home/denniswitt/.nuget/packages/newtonsoft.json/13.0.1/newtonsoft.json.13.0.1.nupkg.sha512",
+    "/home/denniswitt/.nuget/packages/ory.kratos.client/0.11.1/ory.kratos.client.0.11.1.nupkg.sha512",
+    "/home/denniswitt/.nuget/packages/polly/7.2.2/polly.7.2.2.nupkg.sha512",
+    "/home/denniswitt/.nuget/packages/restsharp/106.13.0/restsharp.106.13.0.nupkg.sha512",
+    "/home/denniswitt/.nuget/packages/swashbuckle.aspnetcore/6.4.0/swashbuckle.aspnetcore.6.4.0.nupkg.sha512",
+    "/home/denniswitt/.nuget/packages/swashbuckle.aspnetcore.swagger/6.4.0/swashbuckle.aspnetcore.swagger.6.4.0.nupkg.sha512",
+    "/home/denniswitt/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.4.0/swashbuckle.aspnetcore.swaggergen.6.4.0.nupkg.sha512",
+    "/home/denniswitt/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.4.0/swashbuckle.aspnetcore.swaggerui.6.4.0.nupkg.sha512",
+    "/home/denniswitt/.nuget/packages/system.componentmodel.annotations/5.0.0/system.componentmodel.annotations.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

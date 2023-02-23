@@ -12,22 +12,40 @@ spec:
       labels:
         app: pgadmin
     spec:
+      initContainers:
+        - name: init-pgadmin
+          image: busybox
+          args:
+            - sh
+            - -c
+            - "chown -vR 5050:5050 /var/lib/pgadmin"
+          volumeMounts:
+            - mountPath: /var/lib/pgadmin
+              name: pgadmin-data
       containers:
-      - name: pgadmin
-        image: dpage/pgadmin4
-        env:
-          - name: PGADMIN_DEFAULT_EMAIL
-            value: pgadmin@mail.com
-          - name: PGADMIN_DEFAULT_PASSWORD
-            value: admin
-        resources:
-          limits:
-            memory: "128Mi"
-            cpu: "500m"
-        ports:
-          - name: http
-            containerPort: 80
-            protocol: TCP
-          - name: https
-            containerPort: 443
-            protocol: TCP
+        - name: pgadmin
+          image: dpage/pgadmin4
+          env:
+            - name: PGADMIN_DEFAULT_EMAIL
+              value: pgadmin@mail.com
+            - name: PGADMIN_DEFAULT_PASSWORD
+              value: admin
+          resources:
+            limits:
+              memory: "128Mi"
+              cpu: "500m"
+          ports:
+            - name: http
+              containerPort: 80
+              protocol: TCP
+            - name: https
+              containerPort: 443
+              protocol: TCP
+          volumeMounts:
+            - mountPath: /var/lib/pgadmin
+              name: pgadmin-data
+      volumes:
+        - name: pgadmin-data
+          
+      
+        

@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "8F5kCo8ro3Rku2L1PB55SoSyO4lx2hdhYfm9Fb9TVl0=",
+  "Source": "AuthProxyApi",
+  "BasePath": "_content/AuthProxyApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
