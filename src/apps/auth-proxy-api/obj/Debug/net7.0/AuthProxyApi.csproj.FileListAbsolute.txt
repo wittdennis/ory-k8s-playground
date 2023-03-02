@@ -33,3 +33,4 @@
 /home/denniswitt/src/ory-k8s-playground/src/apps/auth-proxy-api/obj/Debug/net7.0/ref/AuthProxyApi.dll
 /home/denniswitt/src/ory-k8s-playground/src/apps/auth-proxy-api/bin/Debug/net7.0/KratosClient.dll
 /home/denniswitt/src/ory-k8s-playground/src/apps/auth-proxy-api/bin/Debug/net7.0/KratosClient.pdb
+/home/denniswitt/src/ory-k8s-playground/src/apps/auth-proxy-api/bin/Debug/net7.0/Macross.Json.Extensions.dll

@@ -1,11 +1,45 @@
 {
   "version": 3,
   "targets": {
-    "net7.0": {}
+    "net7.0": {
+      "Macross.Json.Extensions/3.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Macross.Json.Extensions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Macross.Json.Extensions.dll": {
+            "related": ".xml"
+          }
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Macross.Json.Extensions/3.0.0": {
+      "sha512": "AkNshs6dopj8FXsmkkJxvLivN2SyDJQDbjcds5lo9+Y6L4zpcoXdmzXQ3VVN+AIWQr0CTD5A7vkuHGAr2aypZg==",
+      "type": "package",
+      "path": "macross.json.extensions/3.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net6.0/Macross.Json.Extensions.dll",
+        "lib/net6.0/Macross.Json.Extensions.xml",
+        "lib/netstandard2.0/Macross.Json.Extensions.dll",
+        "lib/netstandard2.0/Macross.Json.Extensions.xml",
+        "lib/netstandard2.1/Macross.Json.Extensions.dll",
+        "lib/netstandard2.1/Macross.Json.Extensions.xml",
+        "macross.json.extensions.3.0.0.nupkg.sha512",
+        "macross.json.extensions.nuspec"
+      ]
+    }
+  },
   "projectFileDependencyGroups": {
-    "net7.0": []
+    "net7.0": [
+      "Macross.Json.Extensions >= 3.0.0"
+    ]
   },
   "packageFolders": {
     "/home/denniswitt/.nuget/packages/": {}
@@ -43,6 +77,12 @@
     "frameworks": {
       "net7.0": {
         "targetAlias": "net7.0",
+        "dependencies": {
+          "Macross.Json.Extensions": {
+            "target": "Package",
+            "version": "[3.0.0, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",
@@ -59,7 +99,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/7.0.102/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/7.0.103/RuntimeIdentifierGraph.json"
       }
     }
   }

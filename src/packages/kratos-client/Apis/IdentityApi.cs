@@ -1,6 +1,7 @@
 using KratosClient.Apis.Interfaces;
 using KratosClient.Core;
 using KratosClient.Endpoints;
+using KratosClient.Types;
 
 namespace KratosClient.Apis;
 
@@ -14,7 +15,7 @@ internal class IdentityApi : BaseApi, IIdentityApi
     }
 
     /// <inheritdoc>
-    public async Task ListAsync(int? perPage, int? page, CancellationToken cancellationToken = default)
+    public async Task<IResult<IReadOnlyCollection<Identity>, KratosError>> ListAsync(int? perPage, int? page, CancellationToken cancellationToken = default)
     {
         if (perPage != null && (perPage < 1 || perPage > 1000))
         {
@@ -36,6 +37,6 @@ internal class IdentityApi : BaseApi, IIdentityApi
             listRequest.AddParameter("page", page.Value);
         }
 
-        await ExecuteRequestAsync(listRequest, cancellationToken);
+        return await ExecuteRequestAsync<IReadOnlyCollection<Identity>, KratosError>(listRequest, cancellationToken).ConfigureAwait(false);
     }
 }

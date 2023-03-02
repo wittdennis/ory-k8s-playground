@@ -1,3 +1,4 @@
+using KratosClient.Types;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AuthProxyApi.Controllers;
@@ -32,7 +33,7 @@ public class AuthController : ControllerBase
 
     [HttpGet]
     [Route("list")]
-    public async Task ListIdentities()
+    public async Task<ActionResult> ListIdentities()
     {
         KratosClient.KratosClient kratosClient = new KratosClient.KratosClient(new KratosClient.KratosClientOptions
         {
@@ -40,6 +41,8 @@ public class AuthController : ControllerBase
             PublicBaseUrl = "http://localhost:4433"
         });
 
-        await kratosClient.IdentityApi.ListAsync();
+        IResult<IReadOnlyCollection<Identity>, KratosError> listResult = await kratosClient.IdentityApi.ListAsync();
+
+        return listResult.IsSuccess ? Ok(listResult.Target) : StatusCode((int)listResult.Error!.Code);
     }
 }

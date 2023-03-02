@@ -1,6 +1,9 @@
 {
     "cSpell.words": [
-        "Kratos"
+        "Kratos",
+        "oidc",
+        "totp",
+        "webauthn"
     ],
     "editor.formatOnSave": true,
     "editor.formatOnType": true

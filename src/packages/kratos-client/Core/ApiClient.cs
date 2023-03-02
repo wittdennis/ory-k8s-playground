@@ -14,6 +14,6 @@ internal class ApiClient : IApiClient
         HttpRequestMessage requestMessage = HttpRequestBuilder.Create(request);
         HttpResponseMessage responseMessage = await _httpClient.SendAsync(requestMessage, cancellationToken).ConfigureAwait(false);
 
-        return ResponseBuilder.Create(responseMessage);
+        return ResponseBuilder.Create(responseMessage, request);
     }
 }

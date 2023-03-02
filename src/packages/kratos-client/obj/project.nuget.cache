@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "6QJ0A3yvDYxtBWw1qxUvsezY4+E2GaXhdMEdot/tzOIEDpAbjgIldBj033smUUt+iII7yo2ZIO7KRW5sDLkWjg==",
+  "dgSpecHash": "f0GYLqegrOBr2U7aNaCWkgi6GYVYj/3ID1KvSlj5jb0fF32OFez+o/66UrDF6gWDhL1RG0nEJpIOO4zdAvZZ/w==",
   "success": true,
   "projectFilePath": "/home/denniswitt/src/ory-k8s-playground/src/packages/kratos-client/KratosClient.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/home/denniswitt/.nuget/packages/macross.json.extensions/3.0.0/macross.json.extensions.3.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

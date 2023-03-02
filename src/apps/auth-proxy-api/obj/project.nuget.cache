@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "j8GmIcGFq8UIVf+nwdlpbljg2sJ7Tc0Vx0/8cXmurzE7qGpXbwPEOn4FZhDl+6HD3IdsY3o5oNmdPivKGo79Aw==",
+  "dgSpecHash": "jm1jPKCN4kzXyhkhoJfnPgX4jwlmH2WDkCj0jSR3E1yDFM274ZyrV33YiEkQrIc5oFh54wzfZkgohzFsn2KEcQ==",
   "success": true,
   "projectFilePath": "/home/denniswitt/src/ory-k8s-playground/src/apps/auth-proxy-api/AuthProxyApi.csproj",
   "expectedPackageFiles": [
+    "/home/denniswitt/.nuget/packages/macross.json.extensions/3.0.0/macross.json.extensions.3.0.0.nupkg.sha512",
     "/home/denniswitt/.nuget/packages/microsoft.aspnetcore.openapi/7.0.2/microsoft.aspnetcore.openapi.7.0.2.nupkg.sha512",
     "/home/denniswitt/.nuget/packages/microsoft.extensions.apidescription.server/6.0.5/microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "/home/denniswitt/.nuget/packages/microsoft.openapi/1.4.3/microsoft.openapi.1.4.3.nupkg.sha512",

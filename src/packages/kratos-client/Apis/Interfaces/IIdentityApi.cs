@@ -1,3 +1,5 @@
+using KratosClient.Types;
+
 namespace KratosClient.Apis.Interfaces;
 
 /// <summary>
@@ -12,5 +14,5 @@ public interface IIdentityApi
     /// <param name="page">Page to retrieve. Must be greater or equal to one</param>
     /// <param name="cancellationToken">Optional cancellation token</param>
     /// <returns></returns>
-    public Task ListAsync(int? perPage = null, int? page = null, CancellationToken cancellationToken = default);
+    public Task<IResult<IReadOnlyCollection<Identity>, KratosError>> ListAsync(int? perPage = null, int? page = null, CancellationToken cancellationToken = default);
 }

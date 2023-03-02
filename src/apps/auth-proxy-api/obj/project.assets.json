@@ -2,6 +2,19 @@
   "version": 3,
   "targets": {
     "net7.0": {
+      "Macross.Json.Extensions/3.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Macross.Json.Extensions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Macross.Json.Extensions.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.AspNetCore.OpenApi/7.0.2": {
         "type": "package",
         "dependencies": {
@@ -111,6 +124,9 @@
       "KratosClient/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Macross.Json.Extensions": "3.0.0"
+        },
         "compile": {
           "bin/placeholder/KratosClient.dll": {}
         },
@@ -121,6 +137,23 @@
     }
   },
   "libraries": {
+    "Macross.Json.Extensions/3.0.0": {
+      "sha512": "AkNshs6dopj8FXsmkkJxvLivN2SyDJQDbjcds5lo9+Y6L4zpcoXdmzXQ3VVN+AIWQr0CTD5A7vkuHGAr2aypZg==",
+      "type": "package",
+      "path": "macross.json.extensions/3.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net6.0/Macross.Json.Extensions.dll",
+        "lib/net6.0/Macross.Json.Extensions.xml",
+        "lib/netstandard2.0/Macross.Json.Extensions.dll",
+        "lib/netstandard2.0/Macross.Json.Extensions.xml",
+        "lib/netstandard2.1/Macross.Json.Extensions.dll",
+        "lib/netstandard2.1/Macross.Json.Extensions.xml",
+        "macross.json.extensions.3.0.0.nupkg.sha512",
+        "macross.json.extensions.nuspec"
+      ]
+    },
     "Microsoft.AspNetCore.OpenApi/7.0.2": {
       "sha512": "oK0ZRloonE/WDAjHniF2gTbSsTUk5Z26RGN/o6MSlOnrnN12lDMBgpP1o9QbByBLCIRwT/KYvgYeBrYSe/NFnw==",
       "type": "package",
@@ -544,7 +577,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/7.0.102/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/7.0.103/RuntimeIdentifierGraph.json"
       }
     }
   }
