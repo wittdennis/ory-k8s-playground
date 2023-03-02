@@ -12,13 +12,8 @@
 /home/denniswitt/src/ory-k8s-playground/src/apps/auth-proxy-api/bin/Debug/net7.0/AuthProxyApi.runtimeconfig.json
 /home/denniswitt/src/ory-k8s-playground/src/apps/auth-proxy-api/bin/Debug/net7.0/AuthProxyApi.dll
 /home/denniswitt/src/ory-k8s-playground/src/apps/auth-proxy-api/bin/Debug/net7.0/AuthProxyApi.pdb
-/home/denniswitt/src/ory-k8s-playground/src/apps/auth-proxy-api/bin/Debug/net7.0/JsonSubTypes.dll
 /home/denniswitt/src/ory-k8s-playground/src/apps/auth-proxy-api/bin/Debug/net7.0/Microsoft.AspNetCore.OpenApi.dll
 /home/denniswitt/src/ory-k8s-playground/src/apps/auth-proxy-api/bin/Debug/net7.0/Microsoft.OpenApi.dll
-/home/denniswitt/src/ory-k8s-playground/src/apps/auth-proxy-api/bin/Debug/net7.0/Newtonsoft.Json.dll
-/home/denniswitt/src/ory-k8s-playground/src/apps/auth-proxy-api/bin/Debug/net7.0/Ory.Kratos.Client.dll
-/home/denniswitt/src/ory-k8s-playground/src/apps/auth-proxy-api/bin/Debug/net7.0/Polly.dll
-/home/denniswitt/src/ory-k8s-playground/src/apps/auth-proxy-api/bin/Debug/net7.0/RestSharp.dll
 /home/denniswitt/src/ory-k8s-playground/src/apps/auth-proxy-api/bin/Debug/net7.0/Swashbuckle.AspNetCore.Swagger.dll
 /home/denniswitt/src/ory-k8s-playground/src/apps/auth-proxy-api/bin/Debug/net7.0/Swashbuckle.AspNetCore.SwaggerGen.dll
 /home/denniswitt/src/ory-k8s-playground/src/apps/auth-proxy-api/bin/Debug/net7.0/Swashbuckle.AspNetCore.SwaggerUI.dll
@@ -36,3 +31,5 @@
 /home/denniswitt/src/ory-k8s-playground/src/apps/auth-proxy-api/obj/Debug/net7.0/AuthProxyApi.pdb
 /home/denniswitt/src/ory-k8s-playground/src/apps/auth-proxy-api/obj/Debug/net7.0/AuthProxyApi.genruntimeconfig.cache
 /home/denniswitt/src/ory-k8s-playground/src/apps/auth-proxy-api/obj/Debug/net7.0/ref/AuthProxyApi.dll
+/home/denniswitt/src/ory-k8s-playground/src/apps/auth-proxy-api/bin/Debug/net7.0/KratosClient.dll
+/home/denniswitt/src/ory-k8s-playground/src/apps/auth-proxy-api/bin/Debug/net7.0/KratosClient.pdb

@@ -1,0 +1,12 @@
+/home/denniswitt/src/ory-k8s-playground/src/packages/kratos-client/bin/Debug/net7.0/KratosClient.deps.json
+/home/denniswitt/src/ory-k8s-playground/src/packages/kratos-client/bin/Debug/net7.0/KratosClient.dll
+/home/denniswitt/src/ory-k8s-playground/src/packages/kratos-client/bin/Debug/net7.0/KratosClient.pdb
+/home/denniswitt/src/ory-k8s-playground/src/packages/kratos-client/obj/Debug/net7.0/KratosClient.csproj.AssemblyReference.cache
+/home/denniswitt/src/ory-k8s-playground/src/packages/kratos-client/obj/Debug/net7.0/KratosClient.GeneratedMSBuildEditorConfig.editorconfig
+/home/denniswitt/src/ory-k8s-playground/src/packages/kratos-client/obj/Debug/net7.0/KratosClient.AssemblyInfoInputs.cache
+/home/denniswitt/src/ory-k8s-playground/src/packages/kratos-client/obj/Debug/net7.0/KratosClient.AssemblyInfo.cs
+/home/denniswitt/src/ory-k8s-playground/src/packages/kratos-client/obj/Debug/net7.0/KratosClient.csproj.CoreCompileInputs.cache
+/home/denniswitt/src/ory-k8s-playground/src/packages/kratos-client/obj/Debug/net7.0/KratosClient.dll
+/home/denniswitt/src/ory-k8s-playground/src/packages/kratos-client/obj/Debug/net7.0/refint/KratosClient.dll
+/home/denniswitt/src/ory-k8s-playground/src/packages/kratos-client/obj/Debug/net7.0/KratosClient.pdb
+/home/denniswitt/src/ory-k8s-playground/src/packages/kratos-client/obj/Debug/net7.0/ref/KratosClient.dll
