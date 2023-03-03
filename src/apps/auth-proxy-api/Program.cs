@@ -6,6 +6,11 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddKratosClient((opt) =>
+{
+    opt.AdminBaseUrl = "http://localhost:4434";
+    opt.PublicBaseUrl = "http://localhost:4433";
+});
 
 var app = builder.Build();
 

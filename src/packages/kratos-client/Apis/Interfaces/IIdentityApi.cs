@@ -15,4 +15,12 @@ public interface IIdentityApi
     /// <param name="cancellationToken">Optional cancellation token</param>
     /// <returns></returns>
     public Task<IResult<IReadOnlyCollection<Identity>, KratosError>> ListAsync(int? perPage = null, int? page = null, CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Deletes the identity with the specified id
+    /// </summary>
+    /// <param name="id">Id of the identity to delete</param>
+    /// <param name="cancellationToken">Token to cancel the operation</param>
+    /// <returns></returns>
+    public Task<IResult<bool, KratosError>> DeleteAsync(string id, CancellationToken cancellationToken = default);
 }

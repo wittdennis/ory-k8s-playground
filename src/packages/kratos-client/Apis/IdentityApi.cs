@@ -15,7 +15,22 @@ internal class IdentityApi : BaseApi, IIdentityApi
     }
 
     /// <inheritdoc>
-    public async Task<IResult<IReadOnlyCollection<Identity>, KratosError>> ListAsync(int? perPage, int? page, CancellationToken cancellationToken = default)
+    public Task<IResult<bool, KratosError>> DeleteAsync(string id, CancellationToken cancellationToken = default)
+    {
+        if (string.IsNullOrWhiteSpace(id))
+        {
+            throw new ArgumentException($"{nameof(id)} can't be null or empty", id);
+        }
+
+        Endpoint deleteEndpoint = _identityEndpoints.Delete();
+        Request deleteRequest = Request.New(deleteEndpoint.Url, deleteEndpoint.Method)
+                                        .AddParameter("id", id);
+
+        return ExecuteRequestAsync<bool, KratosError>(deleteRequest, cancellationToken);
+    }
+
+    /// <inheritdoc>
+    public Task<IResult<IReadOnlyCollection<Identity>, KratosError>> ListAsync(int? perPage, int? page, CancellationToken cancellationToken = default)
     {
         if (perPage != null && (perPage < 1 || perPage > 1000))
         {
@@ -37,6 +52,6 @@ internal class IdentityApi : BaseApi, IIdentityApi
             listRequest.AddParameter("page", page.Value);
         }
 
-        return await ExecuteRequestAsync<IReadOnlyCollection<Identity>, KratosError>(listRequest, cancellationToken).ConfigureAwait(false);
+        return ExecuteRequestAsync<IReadOnlyCollection<Identity>, KratosError>(listRequest, cancellationToken);
     }
 }
