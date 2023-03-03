@@ -22,3 +22,20 @@ public interface IResult<T, TError>
     /// </summary>
     bool IsSuccess { get; }
 }
+
+/// <summary>
+/// Result of a api call that has an empty result on success
+/// </summary>
+/// <typeparam name="TError">Type of the error</typeparam>
+public interface IEmptyResult<TError>
+{
+    /// <summary>
+    /// Error result of the api call. Null if <see cref="IsSuccess" /> is true.
+    /// </summary>
+    TError? Error { get; }
+
+    /// <summary>
+    /// Flag indicating if the api call was successfull or not.
+    /// </summary>
+    bool IsSuccess { get; }
+}

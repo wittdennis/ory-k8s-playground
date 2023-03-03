@@ -8,14 +8,14 @@ namespace KratosClient;
 
 public class KratosClient
 {
-    public IIdentityApi IdentityApi { get; }
+    public IIdentityApi Identity { get; }
 
     public KratosClient(KratosClientOptions options)
     {
         IApiClient apiClient = new ApiClient(new HttpClient());
         KratosEndpoints endpoints = new KratosEndpoints(new Uri(options.PublicBaseUrl), new Uri(options.AdminBaseUrl));
 
-        IdentityApi = new IdentityApi(apiClient, endpoints);
+        Identity = new IdentityApi(apiClient, endpoints);
     }
 
     public KratosClient(HttpClient httpClient, IOptions<KratosClientOptions> options)
@@ -24,6 +24,6 @@ public class KratosClient
         KratosClientOptions kratosOptions = options.Value;
         KratosEndpoints endpoints = new KratosEndpoints(new Uri(kratosOptions.PublicBaseUrl), new Uri(kratosOptions.AdminBaseUrl));
 
-        IdentityApi = new IdentityApi(apiClient, endpoints);
+        Identity = new IdentityApi(apiClient, endpoints);
     }
 }

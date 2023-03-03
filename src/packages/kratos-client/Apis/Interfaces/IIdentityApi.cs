@@ -22,5 +22,14 @@ public interface IIdentityApi
     /// <param name="id">Id of the identity to delete</param>
     /// <param name="cancellationToken">Token to cancel the operation</param>
     /// <returns></returns>
-    public Task<IResult<bool, KratosError>> DeleteAsync(string id, CancellationToken cancellationToken = default);
+    public Task<IEmptyResult<KratosError>> DeleteAsync(string id, CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Returns an identity by its ID
+    /// </summary>
+    /// <param name="id">ID of the identity to get</param>
+    /// <param name="includeCredentials">Specify which credentials should be included in the response</param>
+    /// <param name="cancellationToken">Token to cancel the operation</param>
+    /// <returns></returns>
+    public Task<IResult<Identity, KratosError>> GetAsync(string id, IEnumerable<string>? includeCredentials = null, CancellationToken cancellationToken = default);
 }

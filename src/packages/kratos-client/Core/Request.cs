@@ -31,18 +31,37 @@ internal class Request
     }
 
     public Request AddParameter(string parameter, string value)
-        => AddParameter(parameter, value);
+        => AddParameter(parameter, value, RequestParameterType.QueryParameter);
 
     public Request AddParameter(string parameter, int value)
-        => AddParameter(parameter, value);
+        => AddParameter(parameter, value, RequestParameterType.QueryParameter);
 
     public Request AddParameter(string parameter, long value)
-        => AddParameter(parameter, value);
+        => AddParameter(parameter, value, RequestParameterType.QueryParameter);
 
-
-    private Request AddParameter(string parameter, object value)
+    public Request AddParameter(string parameter, IEnumerable<string> value)
     {
-        _parameters.Add(new RequestParameter(parameter, value));
+        foreach (string entry in value)
+        {
+            AddParameter(parameter, entry, RequestParameterType.QueryParameter);
+        }
+
+        return this;
+    }
+
+    public Request AddUrlSegment(string placeholderName, string value)
+        => AddParameter(placeholderName, value, RequestParameterType.UrlSegment);
+
+    public Request AddUrlSegment(string placeholderName, int value)
+        => AddParameter(placeholderName, value, RequestParameterType.UrlSegment);
+
+    public Request AddUrlSegment(string placeholderName, long value)
+        => AddParameter(placeholderName, value, RequestParameterType.UrlSegment);
+
+
+    private Request AddParameter(string parameter, object value, RequestParameterType type, bool urlEncode = true)
+    {
+        _parameters.Add(new RequestParameter(parameter, value, type, urlEncode));
 
         return this;
     }

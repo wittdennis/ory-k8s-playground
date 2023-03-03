@@ -22,21 +22,46 @@ internal abstract class BaseApi
 
         Stream contentStream = await response.ReadContentAsStreamAsync(cancellationToken).ConfigureAwait(false);
         T? successResult = default(T);
-        TError? errorResult = default(TError);
+        KratosErrorContainer<TError>? errorResult = default(KratosErrorContainer<TError>);
         if (response.IsSuccessStatusCode)
         {
             successResult = await JsonSerializer.DeserializeAsync<T>(contentStream, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
         else
         {
-            errorResult = await JsonSerializer.DeserializeAsync<TError>(contentStream, cancellationToken: cancellationToken).ConfigureAwait(false);
+            errorResult = await JsonSerializer.DeserializeAsync<KratosErrorContainer<TError>>(contentStream, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
-        if (errorResult == null && successResult == null)
+        if (successResult != null)
         {
-            throw new JsonException();
+            return new Result<T, TError>(successResult);
         }
 
-        return successResult != null ? new Result<T, TError>(successResult) : new Result<T, TError>(errorResult!);
+        if (errorResult == null || errorResult.Error == null)
+        {
+            throw new JsonException("Error while trying to deserialize result");
+        }
+
+        return new Result<T, TError>(errorResult.Error);
+    }
+
+    protected virtual async Task<IEmptyResult<TError>> ExecuteRequestAsync<TError>(Request request, CancellationToken cancellationToken = default)
+    {
+        IResponse response = await ExecuteRequestAsync(request, cancellationToken).ConfigureAwait(false);
+
+        if (response.IsSuccessStatusCode)
+        {
+            return new EmptyResult<TError>();
+        }
+
+        Stream contentStream = await response.ReadContentAsStreamAsync(cancellationToken).ConfigureAwait(false);
+
+        KratosErrorContainer<TError>? error = await JsonSerializer.DeserializeAsync<KratosErrorContainer<TError>>(contentStream, cancellationToken: cancellationToken).ConfigureAwait(false);
+        if (error == null || error.Error == null)
+        {
+            throw new JsonException("Error while trying to deserialize result");
+        }
+
+        return new EmptyResult<TError>(error.Error);
     }
 }

@@ -15,7 +15,7 @@ internal class IdentityApi : BaseApi, IIdentityApi
     }
 
     /// <inheritdoc>
-    public Task<IResult<bool, KratosError>> DeleteAsync(string id, CancellationToken cancellationToken = default)
+    public Task<IEmptyResult<KratosError>> DeleteAsync(string id, CancellationToken cancellationToken = default)
     {
         if (string.IsNullOrWhiteSpace(id))
         {
@@ -24,9 +24,29 @@ internal class IdentityApi : BaseApi, IIdentityApi
 
         Endpoint deleteEndpoint = _identityEndpoints.Delete();
         Request deleteRequest = Request.New(deleteEndpoint.Url, deleteEndpoint.Method)
-                                        .AddParameter("id", id);
+                                        .AddUrlSegment("id", id);
 
-        return ExecuteRequestAsync<bool, KratosError>(deleteRequest, cancellationToken);
+        return ExecuteRequestAsync<KratosError>(deleteRequest, cancellationToken);
+    }
+
+    /// <inheritdoc>
+    public Task<IResult<Identity, KratosError>> GetAsync(string id, IEnumerable<string>? includeCredentials = null, CancellationToken cancellationToken = default)
+    {
+        if (string.IsNullOrWhiteSpace(id))
+        {
+            throw new ArgumentException($"{nameof(id)} can't be null or empty");
+        }
+
+        Endpoint getEndpoint = _identityEndpoints.Get();
+        Request getRequest = Request.New(getEndpoint.Url, getEndpoint.Method)
+                                    .AddUrlSegment("id", id);
+
+        if (includeCredentials != null && includeCredentials.Any())
+        {
+            getRequest.AddParameter("include_credentials", includeCredentials);
+        }
+
+        return ExecuteRequestAsync<Identity, KratosError>(getRequest, cancellationToken);
     }
 
     /// <inheritdoc>

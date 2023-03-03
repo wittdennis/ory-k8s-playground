@@ -36,3 +36,33 @@ internal record Result<T, TError> : IResult<T, TError>
         IsSuccess = false;
     }
 }
+
+/// <summary>
+/// Result of a api call that has an empty result on success
+/// </summary>
+/// <typeparam name="TError">Type of the error</typeparam>
+internal record EmptyResult<TError> : IEmptyResult<TError>
+{
+    /// <inheritdoc />
+    public TError? Error { get; }
+    /// <inheritdoc />
+    public bool IsSuccess { get; }
+
+    /// <summary>
+    /// Creates a success result
+    /// </summary>
+    public EmptyResult()
+    {
+        IsSuccess = true;
+    }
+
+    /// <summary>
+    /// Creates a error result
+    /// </summary>
+    /// <param name="error">Error object</param>
+    public EmptyResult(TError error)
+    {
+        IsSuccess = false;
+        Error = error;
+    }
+}
