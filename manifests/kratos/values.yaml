@@ -6,7 +6,7 @@ kratos:
     enabled: true
     type: initContainer
   config:
-    dsn: postgres://ory:7MKCmw7KkAyQwIiJALcDKp7Vinbnplo8inChpiokTy7ADz95PrPDdvqVMhDAIu48@postgres-ory:5432/kratos
+    dsn: postgres://ory:cTjEtS3D9zo4xcWP52oBQGCAnFYDgB67bs02SAwUiudgA5FHzRTPX1tJ5qrUJISd@postgres-ory-master:5432/kratos
     secrets:
       default:
         - G5zpGur55TehKFPLEKuYW7dCHwiwzTWGBq6yu9m5AHcmdJmP4tfMNS2eLYefAZtCfQYr3W8pHY7rY48NuQF4exBgGV9S8aSthb3xvGcpVZNSfcN9N2feVxBkrzKWLM9J
@@ -26,7 +26,7 @@ kratos:
         cors:
           enabled: true
           allowed_origins:
-            - http://localhost:3000        
+            - http://localhost:3000
           allowed_methods:
             - POST
             - GET

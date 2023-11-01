@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "P6EGdEISwya4rUgYmU7HyvFVZuegtSpvdFUO2zivYS2abuk8JASWkfke7i3woEV95OEylbGXZKMBG6BDS26lZQ==",
+  "dgSpecHash": "acStbdgg6vx84uxYz8sAmBcLFGdJ0sJwggzX408UOdyY57f3ScgP6WjgUIrnR/KDwJ9sU0kDDqmEEQMcWPfheg==",
   "success": true,
   "projectFilePath": "/home/denniswitt/src/ory-k8s-playground/src/apps/auth-proxy-api/AuthProxyApi.csproj",
   "expectedPackageFiles": [

@@ -16,62 +16,14 @@ internal class IdentityApi : BaseApi, IIdentityApi
 
     /// <inheritdoc>
     public Task<IEmptyResult<KratosError>> DeleteAsync(string id, CancellationToken cancellationToken = default)
-    {
-        if (string.IsNullOrWhiteSpace(id))
-        {
-            throw new ArgumentException($"{nameof(id)} can't be null or empty", id);
-        }
-
-        Endpoint deleteEndpoint = _identityEndpoints.Delete();
-        Request deleteRequest = Request.New(deleteEndpoint.Url, deleteEndpoint.Method)
-                                        .AddUrlSegment("id", id);
-
-        return ExecuteRequestAsync<KratosError>(deleteRequest, cancellationToken);
-    }
+        => ExecuteRequestAsync<KratosError>(_identityEndpoints.Delete(id), cancellationToken);
 
     /// <inheritdoc>
     public Task<IResult<Identity, KratosError>> GetAsync(string id, IEnumerable<string>? includeCredentials = null, CancellationToken cancellationToken = default)
-    {
-        if (string.IsNullOrWhiteSpace(id))
-        {
-            throw new ArgumentException($"{nameof(id)} can't be null or empty");
-        }
-
-        Endpoint getEndpoint = _identityEndpoints.Get();
-        Request getRequest = Request.New(getEndpoint.Url, getEndpoint.Method)
-                                    .AddUrlSegment("id", id);
-
-        if (includeCredentials != null && includeCredentials.Any())
-        {
-            getRequest.AddParameter("include_credentials", includeCredentials);
-        }
-
-        return ExecuteRequestAsync<Identity, KratosError>(getRequest, cancellationToken);
-    }
+        => ExecuteRequestAsync<Identity, KratosError>(_identityEndpoints.Get(id, includeCredentials), cancellationToken);
 
     /// <inheritdoc>
-    public Task<IResult<IReadOnlyCollection<Identity>, KratosError>> ListAsync(int? perPage, int? page, CancellationToken cancellationToken = default)
-    {
-        if (perPage != null && (perPage < 1 || perPage > 1000))
-        {
-            throw new ArgumentException("Must be between 1 and 1000", nameof(perPage));
-        }
-        if (page != null && page < 1)
-        {
-            throw new ArgumentException("Must be equal or greater 1", nameof(page));
-        }
+    public Task<IResult<IReadOnlyCollection<Identity>, KratosError>> ListAsync(int? perPage = null, int? page = null, CancellationToken cancellationToken = default)
+        => ExecuteRequestAsync<IReadOnlyCollection<Identity>, KratosError>(_identityEndpoints.List(perPage, page), cancellationToken);
 
-        Endpoint listEndpoint = _identityEndpoints.List();
-        Request listRequest = Request.New(listEndpoint.Url, listEndpoint.Method);
-        if (perPage.HasValue)
-        {
-            listRequest.AddParameter("per_page", perPage.Value);
-        }
-        if (page.HasValue)
-        {
-            listRequest.AddParameter("page", page.Value);
-        }
-
-        return ExecuteRequestAsync<IReadOnlyCollection<Identity>, KratosError>(listRequest, cancellationToken);
-    }
 }

@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: postgres-ory-master
+  namespace: ory-playground
+spec:
+  selector:
+    application: spilo
+    cluster-name: postgres-ory
+    spilo-role: master
+  ports:
+    - port: 8008
+      targetPort: 8008
+      name: management
+    - port: 5432
+      targetPort: 5432
+      name: psql
+    - port: 8080
+      targetPort: 8080
+      name: monitor

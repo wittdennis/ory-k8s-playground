@@ -18,7 +18,7 @@ public interface IResult<T, TError>
     TError? Error { get; }
 
     /// <summary>
-    /// Flag indicating if the api call was successfull or not.
+    /// Flag indicating if the api call was successful or not.
     /// </summary>
     bool IsSuccess { get; }
 }
@@ -35,7 +35,7 @@ public interface IEmptyResult<TError>
     TError? Error { get; }
 
     /// <summary>
-    /// Flag indicating if the api call was successfull or not.
+    /// Flag indicating if the api call was successful or not.
     /// </summary>
     bool IsSuccess { get; }
 }

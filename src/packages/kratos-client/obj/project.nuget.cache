@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "eoI+NdJLuZ0l1woq730+MGTMigyWXW/nt/mMhqrxR46nAPl4V/7drtUzC7HbszIDiC+/kmg66nwnZg0aBMnAfA==",
+  "dgSpecHash": "29MdbV99BP48jHn+1n6341qbRGbtz5wzc/+pYUc+ln09R71yQ2ECGf8DhTTswS70ndWVUypsFPuFLaL0+8kx0g==",
   "success": true,
   "projectFilePath": "/home/denniswitt/src/ory-k8s-playground/src/packages/kratos-client/KratosClient.csproj",
   "expectedPackageFiles": [

@@ -8,7 +8,7 @@ public static class KratosClientServiceCollectionExtensions
     public static IServiceCollection AddKratosClient(this IServiceCollection serviceCollection, Action<KratosClientOptions> configureAction)
     {
         serviceCollection.AddHttpClient<KratosClient.KratosClient>();
-        serviceCollection.Configure<KratosClientOptions>(configureAction);
+        serviceCollection.Configure(configureAction);
 
         return serviceCollection;
     }
