@@ -14,7 +14,7 @@ public interface IIdentityApi
     /// <param name="page">Page to retrieve. Must be greater or equal to one</param>
     /// <param name="cancellationToken">Optional cancellation token</param>
     /// <returns></returns>
-    public Task<IResult<IReadOnlyCollection<Identity>, KratosError>> ListAsync(int? perPage = null, int? page = null, CancellationToken cancellationToken = default);
+    Task<IResult<IReadOnlyCollection<Identity>, KratosError>> ListAsync(int? perPage = null, int? page = null, CancellationToken cancellationToken = default);
 
     /// <summary>
     /// Deletes the identity with the specified id
@@ -22,7 +22,7 @@ public interface IIdentityApi
     /// <param name="id">Id of the identity to delete</param>
     /// <param name="cancellationToken">Token to cancel the operation</param>
     /// <returns></returns>
-    public Task<IEmptyResult<KratosError>> DeleteAsync(string id, CancellationToken cancellationToken = default);
+    Task<IEmptyResult<KratosError>> DeleteAsync(string id, CancellationToken cancellationToken = default);
 
     /// <summary>
     /// Returns an identity by its ID
@@ -31,5 +31,13 @@ public interface IIdentityApi
     /// <param name="includeCredentials">Specify which credentials should be included in the response</param>
     /// <param name="cancellationToken">Token to cancel the operation</param>
     /// <returns></returns>
-    public Task<IResult<Identity, KratosError>> GetAsync(string id, IEnumerable<string>? includeCredentials = null, CancellationToken cancellationToken = default);
+    Task<IResult<Identity, KratosError>> GetAsync(string id, IEnumerable<string>? includeCredentials = null, CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Creates a new identity. Can also be used to import credentials.
+    /// </summary>
+    /// <param name="identity">The identity to create</param>
+    /// <param name="cancellationToken">Token to cancel the operation</param>
+    /// <returns></returns>
+    Task<IResult<Identity, KratosError>> CreateAsync(CreateIdentity identity, CancellationToken cancellationToken = default);
 }

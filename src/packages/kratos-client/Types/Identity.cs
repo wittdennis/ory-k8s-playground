@@ -7,7 +7,7 @@ public record Identity
 {
     /// <summary>
     /// ID is the identity's unique identifier.
-    /// 
+    ///
     /// <para>The Identity ID can not be changed and can not be chosen. The Identity ID can not be changed and can not be chosen.</para>
     /// </summary>
     [JsonPropertyName("id")]
@@ -22,6 +22,7 @@ public record Identity
     /// <summary>
     /// Credentials represents all credentials that can be used for authenticating this identity.
     /// </summary>
+    [JsonPropertyName("credentials")]
     public Dictionary<string, IdentityCredentials> Credentials { get; init; } = new();
 
     /// <summary>

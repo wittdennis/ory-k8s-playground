@@ -8,7 +8,7 @@ internal abstract class BaseApi
 {
     private readonly IApiClient _apiClient;
 
-    public BaseApi(IApiClient apiClient)
+    protected BaseApi(IApiClient apiClient)
     {
         _apiClient = apiClient;
     }
@@ -21,8 +21,8 @@ internal abstract class BaseApi
         IResponse response = await ExecuteRequestAsync(request, cancellationToken).ConfigureAwait(false);
 
         Stream contentStream = await response.ReadContentAsStreamAsync(cancellationToken).ConfigureAwait(false);
-        T? successResult = default(T);
-        KratosErrorContainer<TError>? errorResult = default(KratosErrorContainer<TError>);
+        T? successResult = default;
+        KratosErrorContainer<TError>? errorResult = default;
         if (response.IsSuccessStatusCode)
         {
             successResult = await JsonSerializer.DeserializeAsync<T>(contentStream, cancellationToken: cancellationToken).ConfigureAwait(false);

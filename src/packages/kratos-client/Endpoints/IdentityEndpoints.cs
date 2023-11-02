@@ -1,4 +1,5 @@
 using KratosClient.Core;
+using KratosClient.Types;
 
 namespace KratosClient.Endpoints;
 
@@ -80,4 +81,12 @@ internal sealed class IdentityEndpoints
 
         return getRequest;
     }
+
+    /// <summary>
+    /// Endpoint to create a new identity
+    /// </summary>
+    /// <param name="identity">The identity to create</param>
+    /// <returns>The <see cref="Request"/> to be used to call the api</returns>
+    public Request Create(CreateIdentity identity)
+        => Request.New(EndpointUrlBuilder.Build(_baseUrl, "/admin/identities"), HttpMethod.Post).AddJsonBody(identity);
 }

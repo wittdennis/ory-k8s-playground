@@ -14,16 +14,27 @@ internal class IdentityApi : BaseApi, IIdentityApi
         _identityEndpoints = endpoints.IdentityEndpoints;
     }
 
-    /// <inheritdoc>
+    /// <inheritdoc />
     public Task<IEmptyResult<KratosError>> DeleteAsync(string id, CancellationToken cancellationToken = default)
         => ExecuteRequestAsync<KratosError>(_identityEndpoints.Delete(id), cancellationToken);
 
-    /// <inheritdoc>
+    /// <inheritdoc />
     public Task<IResult<Identity, KratosError>> GetAsync(string id, IEnumerable<string>? includeCredentials = null, CancellationToken cancellationToken = default)
         => ExecuteRequestAsync<Identity, KratosError>(_identityEndpoints.Get(id, includeCredentials), cancellationToken);
 
-    /// <inheritdoc>
+    /// <inheritdoc />
     public Task<IResult<IReadOnlyCollection<Identity>, KratosError>> ListAsync(int? perPage = null, int? page = null, CancellationToken cancellationToken = default)
         => ExecuteRequestAsync<IReadOnlyCollection<Identity>, KratosError>(_identityEndpoints.List(perPage, page), cancellationToken);
+
+    /// <inheritdoc />
+    public Task<IResult<Identity, KratosError>> CreateAsync(CreateIdentity identity, CancellationToken cancellationToken = default)
+    {
+        if (identity == null)
+        {
+            throw new ArgumentNullException(nameof(identity));
+        }
+
+        return ExecuteRequestAsync<Identity, KratosError>(_identityEndpoints.Create(identity), cancellationToken);
+    }
 
 }
