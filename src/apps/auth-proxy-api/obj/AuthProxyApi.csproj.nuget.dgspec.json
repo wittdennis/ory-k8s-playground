@@ -1,33 +1,48 @@
 {
   "format": 1,
   "restore": {
-    "/home/denniswitt/src/ory-k8s-playground/src/apps/auth-proxy-api/AuthProxyApi.csproj": {}
+    "C:\\workspace\\private\\ory-k8s-playground\\src\\apps\\auth-proxy-api\\AuthProxyApi.csproj": {}
   },
   "projects": {
-    "/home/denniswitt/src/ory-k8s-playground/src/apps/auth-proxy-api/AuthProxyApi.csproj": {
+    "C:\\workspace\\private\\ory-k8s-playground\\src\\apps\\auth-proxy-api\\AuthProxyApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/denniswitt/src/ory-k8s-playground/src/apps/auth-proxy-api/AuthProxyApi.csproj",
+        "projectUniqueName": "C:\\workspace\\private\\ory-k8s-playground\\src\\apps\\auth-proxy-api\\AuthProxyApi.csproj",
         "projectName": "AuthProxyApi",
-        "projectPath": "/home/denniswitt/src/ory-k8s-playground/src/apps/auth-proxy-api/AuthProxyApi.csproj",
-        "packagesPath": "/home/denniswitt/.nuget/packages/",
-        "outputPath": "/home/denniswitt/src/ory-k8s-playground/src/apps/auth-proxy-api/obj/",
+        "projectPath": "C:\\workspace\\private\\ory-k8s-playground\\src\\apps\\auth-proxy-api\\AuthProxyApi.csproj",
+        "packagesPath": "C:\\Users\\D.Witt\\.nuget\\packages\\",
+        "outputPath": "C:\\workspace\\private\\ory-k8s-playground\\src\\apps\\auth-proxy-api\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\DevExpress 23.1\\Components\\Offline Packages",
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "/home/denniswitt/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\D.Witt\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 19.2.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 23.1.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
-          "https://api.nuget.org/v3/index.json": {}
+          "C:\\Program Files (x86)\\DevExpress 19.2\\Components\\System\\Components\\Packages": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\DevExpress 23.1\\Components\\System\\Components\\Packages": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://tfsbs.iucon.de/tfs/DefaultCollection/_packaging/iucon/nuget/v3/index.json": {},
+          "https://tfsbs.iucon.de/tfs/DefaultCollection/_packaging/sip_nuget/nuget/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "/home/denniswitt/src/ory-k8s-playground/src/packages/kratos-client/KratosClient.csproj": {
-                "projectPath": "/home/denniswitt/src/ory-k8s-playground/src/packages/kratos-client/KratosClient.csproj"
+              "C:\\workspace\\private\\ory-k8s-playground\\src\\packages\\kratos-client\\KratosClient.csproj": {
+                "projectPath": "C:\\workspace\\private\\ory-k8s-playground\\src\\packages\\kratos-client\\KratosClient.csproj"
               }
             }
           }
@@ -70,27 +85,42 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/7.0.112/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/home/denniswitt/src/ory-k8s-playground/src/packages/kratos-client/KratosClient.csproj": {
+    "C:\\workspace\\private\\ory-k8s-playground\\src\\packages\\kratos-client\\KratosClient.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/denniswitt/src/ory-k8s-playground/src/packages/kratos-client/KratosClient.csproj",
+        "projectUniqueName": "C:\\workspace\\private\\ory-k8s-playground\\src\\packages\\kratos-client\\KratosClient.csproj",
         "projectName": "KratosClient",
-        "projectPath": "/home/denniswitt/src/ory-k8s-playground/src/packages/kratos-client/KratosClient.csproj",
-        "packagesPath": "/home/denniswitt/.nuget/packages/",
-        "outputPath": "/home/denniswitt/src/ory-k8s-playground/src/packages/kratos-client/obj/",
+        "projectPath": "C:\\workspace\\private\\ory-k8s-playground\\src\\packages\\kratos-client\\KratosClient.csproj",
+        "packagesPath": "C:\\Users\\D.Witt\\.nuget\\packages\\",
+        "outputPath": "C:\\workspace\\private\\ory-k8s-playground\\src\\packages\\kratos-client\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\DevExpress 23.1\\Components\\Offline Packages",
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "/home/denniswitt/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\D.Witt\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 19.2.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 23.1.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
-          "https://api.nuget.org/v3/index.json": {}
+          "C:\\Program Files (x86)\\DevExpress 19.2\\Components\\System\\Components\\Packages": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\DevExpress 23.1\\Components\\System\\Components\\Packages": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://tfsbs.iucon.de/tfs/DefaultCollection/_packaging/iucon/nuget/v3/index.json": {},
+          "https://tfsbs.iucon.de/tfs/DefaultCollection/_packaging/sip_nuget/nuget/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
@@ -133,7 +163,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/7.0.112/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     }
